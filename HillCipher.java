@@ -1,35 +1,28 @@
-import java.util.*;
-
-class Hill {
+public class Hill {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        String s = "HELP";
+        int[][] k = {{3, 3}, {2, 5}};
+        int[][] inv = {{15, 17}, {20, 9}};
 
-        int[][] key = {{3, 3}, {2, 5}};
+        String enc = "", dec = "";
 
-        System.out.print("Enter 2-letter text: ");
-        String s = sc.next().toUpperCase();
+        for (int i = 0; i < s.length(); i += 2) {
+            int a = s.charAt(i) - 'A';
+            int b = s.charAt(i + 1) - 'A';
 
-        int a = s.charAt(0) - 'A';
-        int b = s.charAt(1) - 'A';
+            enc += (char)((3*a + 3*b) % 26 + 'A');
+            enc += (char)((2*a + 5*b) % 26 + 'A');
+        }
 
-        int x = (3 * a + 3 * b) % 26;
-        int y = (2 * a + 5 * b) % 26;
+        for (int i = 0; i < enc.length(); i += 2) {
+            int a = enc.charAt(i) - 'A';
+            int b = enc.charAt(i + 1) - 'A';
 
-        String enc = "" + (char)(x + 'A') + (char)(y + 'A');
-
-        int det = 9;
-        int inv = 3;   // inverse of 9 mod 26
-
-        int p = (inv * (5 * x - 3 * y)) % 26;
-        int q = (inv * (-2 * x + 3 * y)) % 26;
-
-        if (p < 0) p += 26;
-        if (q < 0) q += 26;
-
-        String dec = "" + (char)(p + 'A') + (char)(q + 'A');
+            dec += (char)((15*a + 17*b) % 26 + 'A');
+            dec += (char)((20*a + 9*b) % 26 + 'A');
+        }
 
         System.out.println("Encrypted: " + enc);
         System.out.println("Decrypted: " + dec);
     }
 }
-
