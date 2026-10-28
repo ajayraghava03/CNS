@@ -13,15 +13,16 @@ class Caesar {
         String enc = "", dec = "";
 
         for (char c : s.toCharArray())
-            enc += (char)(c + key);
+             enc += (char)('A' + (c - 'A' + key) % 26);
 
         for (char c : enc.toCharArray())
-            dec += (char)(c - key);
+             dec += (char)('A' + (c - 'A' - key + 26) % 26);
 
         System.out.println("Encrypted: " + enc);
         System.out.println("Decrypted: " + dec);
     }
 }
+
 
 
 ##################### other ########################
