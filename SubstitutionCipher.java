@@ -24,3 +24,7 @@ class Substitution {
     }
 }
 
+output :
+Enter text: Ram
+Encrypted: KQD
+Decrypted: RAM
