@@ -14,3 +14,6 @@ class SHA1 {
         System.out.println("SHA-1 Digest: " + result);
     }
 }
+
+output :
+SHA-1 Digest: 7b502c3a1f48c8609ae212cdfb639dee39673f5e
