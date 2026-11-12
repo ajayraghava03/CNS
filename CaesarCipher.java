@@ -5,7 +5,7 @@ class Caesar {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter text: ");
-        String s = sc.nextLine();
+        String s = sc.nextLine().toUpperCase();;
 
         System.out.print("Enter key: ");
         int key = sc.nextInt();
