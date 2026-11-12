@@ -21,3 +21,7 @@ class DES {
                            "\nDecrypted: " + dec);
     }
 }
+
+output :
+Encrypted: ??b?.??
+Decrypted: Hello
