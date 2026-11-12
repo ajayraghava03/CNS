@@ -23,6 +23,14 @@ class Caesar {
     }
 }
 
+output :
+Enter the string:
+ajay
+Enter the Key:
+3
+Encrypted: DMDB
+Decrypted: AJAY
+
 
 
 ##################### other ########################
