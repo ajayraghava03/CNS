@@ -23,3 +23,5 @@ class Blowfish {
     }
 }
 
+Encrypted: ?IKd[?J
+Decrypted: Hello
