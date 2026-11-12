@@ -23,5 +23,5 @@ class DES {
 }
 
 output :
-Encrypted: ??b?.??
+Encrypted: Q??{?2>?
 Decrypted: Hello
