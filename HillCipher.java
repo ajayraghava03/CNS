@@ -28,3 +28,6 @@ public class Hill {
         System.out.println("Decrypted: " + dec);
     }
 }
+
+Encrypted: HIAT
+Decrypted: HELP
